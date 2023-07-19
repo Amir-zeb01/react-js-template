@@ -12,8 +12,8 @@
     "web-vitals": "^2.1.4"
   },
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
+    "start": "postcss ./src/scss/style.pcss -o ./src/App.css && react-scripts start",
+    "build": "postcss ./src/scss/style.pcss -o ./src/App.css && react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "check": "npx prettier . --check",
@@ -42,8 +42,15 @@
     ]
   },
   "devDependencies": {
+    "autoprefixer": "^10.4.14",
+    "cssnano": "^6.0.1",
     "husky": "^8.0.3",
     "lint-staged": "^13.2.3",
+    "postcss": "^8.4.26",
+    "postcss-cli": "^10.1.0",
+    "postcss-import": "^15.1.0",
+    "postcss-preset-env": "^9.0.0",
+    "postcss-scss": "^4.0.6",
     "prettier": "3.0.0"
   }
 }
